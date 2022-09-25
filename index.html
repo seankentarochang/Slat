@@ -24,11 +24,31 @@
         chatEnabled: true,
         screenShareEnabled: true,
 
-        /*
-  
-       Other Feature Properties
-        
-        */
+        joinScreen: {
+          visible: true, // Show the join screen ?
+          title: aiden,
+        },
+      };
+
+      const meeting = new VideoSDKMeeting();
+      meeting.init(config);
+    });
+
+    script.addEventListener("load", function (event) {
+      const config = {
+        name: "",
+        meetingId: "milkyway",
+        apiKey: "e8926392-22c3-4102-9619-52dea126879a",
+
+        containerId: null,
+
+        micEnabled: true,
+        webcamEnabled: true,
+        participantCanToggleSelfWebcam: true,
+        participantCanToggleSelfMic: true,
+
+        chatEnabled: true,
+        screenShareEnabled: true,
 
         joinScreen: {
           visible: true, // Show the join screen ?
